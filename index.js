@@ -30,6 +30,7 @@ async function run() {
           const result = await UserRegistrationCollection.insertOne(userData);
           res.json(result)
       })
+      
       app.get("/userRegister", async (req, res) => {
           const result = await UserRegistrationCollection.find({}).toArray();
           res.send(result)
